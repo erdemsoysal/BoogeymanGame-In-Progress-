@@ -8,7 +8,7 @@ public class PlayerMove : MonoBehaviour
     CharacterController playerController;
     public float speed = 3;
     public float gravity = 9.8f;
-
+    public Transform playerCamera;
 
     // Start is called before the first frame update
     void Start()
@@ -20,23 +20,19 @@ public class PlayerMove : MonoBehaviour
     void Update()
     {
         PlayerMovement();
-
-
     }
-    
-    
+
+    #region Movement
     Vector3 moveVector;
     private void PlayerMovement()
     {
         moveVector = new Vector3(Input.GetAxis("Horizontal") * speed * Time.deltaTime, 0, Input.GetAxis("Vertical") * speed * Time.deltaTime);
-        moveVector = transform.TransformDirection(moveVector);
+        moveVector = playerCamera.TransformDirection(moveVector);
         gravityEffect();
         playerController.Move(moveVector);
-
-
-
     }
-   
+    #endregion
+
     #region Gravity
     void gravityEffect()
     {

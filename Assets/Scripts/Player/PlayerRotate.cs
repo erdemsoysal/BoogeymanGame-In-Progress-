@@ -9,7 +9,6 @@ public class PlayerRotate : MonoBehaviour
     public float sensitivity = 3;
 
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +24,7 @@ public class PlayerRotate : MonoBehaviour
 
     private float rotY;
     private float rotX;
-    private void rotatePlayer()
+    void rotatePlayer()
     {
         rotY += sensitivity * Input.GetAxis("Mouse Y")*-1;
         rotX += sensitivity * Input.GetAxis("Mouse X");
