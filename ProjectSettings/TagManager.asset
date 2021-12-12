@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - lightSwitch
+  - lightSwitchRoom1
+  - Door
   layers:
   - Default
   - TransparentFX
