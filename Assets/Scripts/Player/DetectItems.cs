@@ -19,6 +19,11 @@ public class DetectItems : MonoBehaviour
     public Light HallwayLight;
     public Light CorridorLight;
     public Light Room2Light;
+    public Light BathroomLight;
+    public Light Room3Light;
+    public Light LivingRoom1Light;
+    public Light LivingRoom2Light;
+    public Light KitchenLight;
 
 
     PlayerMove playerMove;
@@ -31,6 +36,11 @@ public class DetectItems : MonoBehaviour
         //HallwayLight.enabled = false;
         CorridorLight.enabled = false;
         Room2Light.enabled = false;
+        BathroomLight.enabled = false;
+        Room3Light.enabled = false;
+        LivingRoom1Light.enabled = false;
+        LivingRoom2Light.enabled = false;
+        KitchenLight.enabled = false;
 
         #endregion
 
@@ -97,6 +107,56 @@ public class DetectItems : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.F))
                 {
                     Room2Light.enabled = !Room2Light.enabled;
+                }
+            }
+            #endregion
+            #region BathroomLight
+            if (hit.collider.gameObject.tag == "lightSwitchBathroom")
+            {
+                crosshair.color = Color.red;
+                if (Input.GetKeyDown(KeyCode.F))
+                {
+                    BathroomLight.enabled = !BathroomLight.enabled;
+                }
+            }
+            #endregion
+            #region Room3Light
+            if (hit.collider.gameObject.tag == "lightSwitchRoom3")
+            {
+                crosshair.color = Color.red;
+                if (Input.GetKeyDown(KeyCode.F))
+                {
+                    Room3Light.enabled = !Room3Light.enabled;
+                }
+            }
+            #endregion
+            #region LivingRoom1Light
+            if (hit.collider.gameObject.tag == "lightSwitchLivingRoom1")
+            {
+                crosshair.color = Color.red;
+                if (Input.GetKeyDown(KeyCode.F))
+                {
+                    LivingRoom1Light.enabled = !LivingRoom1Light.enabled;
+                }
+            }
+            #endregion
+            #region LivingRoom2Light
+            if (hit.collider.gameObject.tag == "lightSwitchLivingRoom2")
+            {
+                crosshair.color = Color.red;
+                if (Input.GetKeyDown(KeyCode.F))
+                {
+                    LivingRoom2Light.enabled = !LivingRoom2Light.enabled;
+                }
+            }
+            #endregion
+            #region KitchenLight
+            if (hit.collider.gameObject.tag == "lightSwitchKitchen")
+            {
+                crosshair.color = Color.red;
+                if (Input.GetKeyDown(KeyCode.F))
+                {
+                    KitchenLight.enabled = !KitchenLight.enabled;
                 }
             }
             #endregion

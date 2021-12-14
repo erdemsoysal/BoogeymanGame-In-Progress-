@@ -11,6 +11,11 @@ TagManager:
   - lightSwitchHallway
   - lightSwitchCorridor
   - lightSwitchRoom2
+  - lightSwitchBathroom
+  - lightSwitchRoom3
+  - lightSwitchLivingRoom1
+  - lightSwitchLivingRoom2
+  - lightSwitchKitchen
   layers:
   - Default
   - TransparentFX
