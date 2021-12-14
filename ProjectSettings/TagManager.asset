@@ -7,6 +7,10 @@ TagManager:
   - lightSwitch
   - lightSwitchRoom1
   - Door
+  - Bed
+  - lightSwitchHallway
+  - lightSwitchCorridor
+  - lightSwitchRoom2
   layers:
   - Default
   - TransparentFX
