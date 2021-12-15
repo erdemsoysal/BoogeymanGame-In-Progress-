@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InGameTime : MonoBehaviour
 {
-    [SerializeField] private TMPro.TextMeshPro phoneTime;
+    [SerializeField] public TMPro.TextMeshPro phoneTime;
 
     private float hours;
     private float minutes;

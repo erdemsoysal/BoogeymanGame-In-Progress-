@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class Battery : MonoBehaviour
 {
-    private float batteryPercentage;
+    public float batteryPercentage;
     public TMPro.TextMeshPro batteryLevel;
 
     PlayerItems playerItemsScript;
+    InGameTime inGameTimeScript;
 
     // Start is called before the first frame update
     void Start()
     {
         playerItemsScript = GetComponentInParent<PlayerItems>();
-        batteryPercentage = 100f;
+        inGameTimeScript = GetComponentInChildren<InGameTime>();
+        batteryPercentage = 2f;
     }
 
     // Update is called once per frame
@@ -23,6 +25,12 @@ public class Battery : MonoBehaviour
         {
             batteryPercentage -= 1 * Time.deltaTime / 5;
             batteryLevel.text = $"{(int)batteryPercentage}%";
+        }
+        if (batteryPercentage < 1)
+        {
+            batteryLevel.gameObject.SetActive(false);
+            inGameTimeScript.phoneTime.gameObject.SetActive(false);
+            playerItemsScript.phoneLight.enabled = false;
         }
         if (batteryPercentage <= 0)
         {

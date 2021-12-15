@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerItems : MonoBehaviour
 {
-    [SerializeField] private GameObject phone;
+    [SerializeField] public GameObject phone;
     [SerializeField] public Light phoneLight;
 
     // Start is called before the first frame update
