@@ -15,7 +15,7 @@ public class Battery : MonoBehaviour
     {
         playerItemsScript = GetComponentInParent<PlayerItems>();
         inGameTimeScript = GetComponentInChildren<InGameTime>();
-        batteryPercentage = 2f;
+        batteryPercentage = 100f;
     }
 
     // Update is called once per frame
