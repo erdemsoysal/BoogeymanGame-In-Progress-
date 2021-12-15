@@ -75,7 +75,7 @@ public class DetectItems : MonoBehaviour
             #endregion
 
             // [LAYING ON BED]
-            #region Laying On Bed [IN PROGRESS]
+            #region Laying On Bed
 
             if (hit.collider.gameObject.tag == "Bed")
             {

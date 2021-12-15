@@ -5,7 +5,8 @@ using UnityEngine;
 public class PlayerItems : MonoBehaviour
 {
     [SerializeField] private GameObject phone;
-    [SerializeField] private Light phoneLight;
+    [SerializeField] public Light phoneLight;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +17,7 @@ public class PlayerItems : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("PhoneOut"))
+        if (Input.GetButtonDown("PhoneOut"))
         {
             phone.SetActive(!phone.activeSelf);
         }
