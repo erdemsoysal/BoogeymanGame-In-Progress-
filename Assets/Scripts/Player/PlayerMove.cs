@@ -13,6 +13,7 @@ public class PlayerMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         playerController = GetComponent<CharacterController>();
     }
 
@@ -42,12 +43,4 @@ public class PlayerMove : MonoBehaviour
         }
     }
     #endregion
-
-
-
-
-
-
-
-
 }
