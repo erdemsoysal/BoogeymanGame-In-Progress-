@@ -5,10 +5,15 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-    CharacterController playerController;
-    public float speed = 3;
-    public float gravity = 9.8f;
+    [Header("Player")]
     public Transform playerCamera;
+    CharacterController playerController;
+    [Header("Movement Values")]
+    public float speed = 2;
+    public float gravity = 9.8f;
+    [Header("Movement Indicators")]
+    public float moveHorizontal;
+    public float moveVertical;
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +32,9 @@ public class PlayerMove : MonoBehaviour
     Vector3 moveVector;
     private void PlayerMovement()
     {
-        moveVector = new Vector3(Input.GetAxis("Horizontal") * speed * Time.deltaTime, 0, Input.GetAxis("Vertical") * speed * Time.deltaTime);
+        moveHorizontal = Input.GetAxis("Horizontal");
+        moveVertical = Input.GetAxis("Vertical");
+        moveVector = new Vector3(moveHorizontal * speed * Time.deltaTime, 0, moveVertical * speed * Time.deltaTime);
         moveVector = playerCamera.TransformDirection(moveVector);
         gravityEffect();
         playerController.Move(moveVector);
